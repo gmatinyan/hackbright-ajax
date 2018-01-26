@@ -50,9 +50,11 @@ $("#weather-form").on('submit', showWeather);
 function showMessage(result) {
     $('#order-status').append("Code: " + result["code"] + '   ');
     $('#order-status').append("Msg: " + result["msg"]);
+    console.log(result);
     console.log("showed Message!");
-    if (result["msg"] === 'ERROR') {
-        $('#order-status').addClass('order-error');}
+    if (result["code"] === 'ERROR') {
+        $('#order-status').addClass('order-error');
+    }
 
 
 }
